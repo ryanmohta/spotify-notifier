@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		110BD15925DD2E1200F1C6B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD15825DD2E1200F1C6B3 /* AppDelegate.swift */; };
+		110BD15C25DD2E1200F1C6B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110BD15A25DD2E1200F1C6B3 /* Main.storyboard */; };
+		110BD15E25DD2E1200F1C6B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD15D25DD2E1200F1C6B3 /* ViewController.swift */; };
+		110BD16025DD2E1500F1C6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110BD15F25DD2E1500F1C6B3 /* Assets.xcassets */; };
+		110BD16725DD2E1500F1C6B3 /* Spotify Notifier Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 110BD16625DD2E1500F1C6B3 /* Spotify Notifier Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		110BD16C25DD2E1500F1C6B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110BD16B25DD2E1500F1C6B3 /* Cocoa.framework */; };
+		110BD16F25DD2E1500F1C6B3 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */; };
+		110BD17125DD2E1500F1C6B3 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */; };
+		110BD17425DD2E1500F1C6B3 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17325DD2E1500F1C6B3 /* script.js */; };
+		110BD17625DD2E1500F1C6B3 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */; };
+		110BD17925DD2E1500F1C6B3 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		110BD16825DD2E1500F1C6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 110BD14C25DD2E1200F1C6B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 110BD16525DD2E1500F1C6B3;
+			remoteInfo = "Spotify Notifier Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		110BD18125DD2E1500F1C6B3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				110BD16725DD2E1500F1C6B3 /* Spotify Notifier Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		110BD15425DD2E1200F1C6B3 /* Spotify Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		110BD15725DD2E1200F1C6B3 /* Spotify_Notifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Notifier.entitlements; sourceTree = "<group>"; };
+		110BD15825DD2E1200F1C6B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		110BD15B25DD2E1200F1C6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		110BD15D25DD2E1200F1C6B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		110BD15F25DD2E1500F1C6B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		110BD16125DD2E1500F1C6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		110BD16625DD2E1500F1C6B3 /* Spotify Notifier Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Spotify Notifier Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		110BD16B25DD2E1500F1C6B3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		110BD17325DD2E1500F1C6B3 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		110BD17825DD2E1500F1C6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		110BD17A25DD2E1500F1C6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Notifier_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		110BD15125DD2E1200F1C6B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		110BD16325DD2E1500F1C6B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110BD16C25DD2E1500F1C6B3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		110BD14B25DD2E1200F1C6B3 = {
+			isa = PBXGroup;
+			children = (
+				110BD15625DD2E1200F1C6B3 /* Spotify Notifier */,
+				110BD16D25DD2E1500F1C6B3 /* Spotify Notifier Extension */,
+				110BD16A25DD2E1500F1C6B3 /* Frameworks */,
+				110BD15525DD2E1200F1C6B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		110BD15525DD2E1200F1C6B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				110BD15425DD2E1200F1C6B3 /* Spotify Notifier.app */,
+				110BD16625DD2E1500F1C6B3 /* Spotify Notifier Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		110BD15625DD2E1200F1C6B3 /* Spotify Notifier */ = {
+			isa = PBXGroup;
+			children = (
+				110BD15725DD2E1200F1C6B3 /* Spotify_Notifier.entitlements */,
+				110BD15825DD2E1200F1C6B3 /* AppDelegate.swift */,
+				110BD15A25DD2E1200F1C6B3 /* Main.storyboard */,
+				110BD15D25DD2E1200F1C6B3 /* ViewController.swift */,
+				110BD15F25DD2E1500F1C6B3 /* Assets.xcassets */,
+				110BD16125DD2E1500F1C6B3 /* Info.plist */,
+			);
+			path = "Spotify Notifier";
+			sourceTree = "<group>";
+		};
+		110BD16A25DD2E1500F1C6B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				110BD16B25DD2E1500F1C6B3 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		110BD16D25DD2E1500F1C6B3 /* Spotify Notifier Extension */ = {
+			isa = PBXGroup;
+			children = (
+				110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */,
+				110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */,
+				110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */,
+				110BD17A25DD2E1500F1C6B3 /* Info.plist */,
+				110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */,
+				110BD17225DD2E1500F1C6B3 /* Resources */,
+			);
+			path = "Spotify Notifier Extension";
+			sourceTree = "<group>";
+		};
+		110BD17225DD2E1500F1C6B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				110BD17325DD2E1500F1C6B3 /* script.js */,
+				110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		110BD15325DD2E1200F1C6B3 /* Spotify Notifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 110BD18225DD2E1500F1C6B3 /* Build configuration list for PBXNativeTarget "Spotify Notifier" */;
+			buildPhases = (
+				110BD15025DD2E1200F1C6B3 /* Sources */,
+				110BD15125DD2E1200F1C6B3 /* Frameworks */,
+				110BD15225DD2E1200F1C6B3 /* Resources */,
+				110BD18125DD2E1500F1C6B3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				110BD16925DD2E1500F1C6B3 /* PBXTargetDependency */,
+			);
+			name = "Spotify Notifier";
+			productName = "Spotify Notifier";
+			productReference = 110BD15425DD2E1200F1C6B3 /* Spotify Notifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		110BD16525DD2E1500F1C6B3 /* Spotify Notifier Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 110BD17E25DD2E1500F1C6B3 /* Build configuration list for PBXNativeTarget "Spotify Notifier Extension" */;
+			buildPhases = (
+				110BD16225DD2E1500F1C6B3 /* Sources */,
+				110BD16325DD2E1500F1C6B3 /* Frameworks */,
+				110BD16425DD2E1500F1C6B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spotify Notifier Extension";
+			productName = "Spotify Notifier Extension";
+			productReference = 110BD16625DD2E1500F1C6B3 /* Spotify Notifier Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		110BD14C25DD2E1200F1C6B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					110BD15325DD2E1200F1C6B3 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					110BD16525DD2E1500F1C6B3 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 110BD14F25DD2E1200F1C6B3 /* Build configuration list for PBXProject "Spotify Notifier" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 110BD14B25DD2E1200F1C6B3;
+			productRefGroup = 110BD15525DD2E1200F1C6B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				110BD15325DD2E1200F1C6B3 /* Spotify Notifier */,
+				110BD16525DD2E1500F1C6B3 /* Spotify Notifier Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		110BD15225DD2E1200F1C6B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110BD16025DD2E1500F1C6B3 /* Assets.xcassets in Resources */,
+				110BD15C25DD2E1200F1C6B3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		110BD16425DD2E1500F1C6B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110BD17925DD2E1500F1C6B3 /* SafariExtensionViewController.xib in Resources */,
+				110BD17625DD2E1500F1C6B3 /* ToolbarItemIcon.pdf in Resources */,
+				110BD17425DD2E1500F1C6B3 /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		110BD15025DD2E1200F1C6B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110BD15E25DD2E1200F1C6B3 /* ViewController.swift in Sources */,
+				110BD15925DD2E1200F1C6B3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		110BD16225DD2E1500F1C6B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110BD17125DD2E1500F1C6B3 /* SafariExtensionViewController.swift in Sources */,
+				110BD16F25DD2E1500F1C6B3 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		110BD16925DD2E1500F1C6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 110BD16525DD2E1500F1C6B3 /* Spotify Notifier Extension */;
+			targetProxy = 110BD16825DD2E1500F1C6B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		110BD15A25DD2E1200F1C6B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				110BD15B25DD2E1200F1C6B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				110BD17825DD2E1500F1C6B3 /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		110BD17C25DD2E1500F1C6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		110BD17D25DD2E1500F1C6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		110BD17F25DD2E1500F1C6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier Extension/Spotify_Notifier_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX2UC95MTQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Spotify Notifier Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanmohta.Spotify-Notifier.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		110BD18025DD2E1500F1C6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier Extension/Spotify_Notifier_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX2UC95MTQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Spotify Notifier Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanmohta.Spotify-Notifier.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		110BD18325DD2E1500F1C6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier/Spotify_Notifier.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XX2UC95MTQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Spotify Notifier/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanmohta.Spotify-Notifier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		110BD18425DD2E1500F1C6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier/Spotify_Notifier.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XX2UC95MTQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Spotify Notifier/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanmohta.Spotify-Notifier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		110BD14F25DD2E1200F1C6B3 /* Build configuration list for PBXProject "Spotify Notifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110BD17C25DD2E1500F1C6B3 /* Debug */,
+				110BD17D25DD2E1500F1C6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		110BD17E25DD2E1500F1C6B3 /* Build configuration list for PBXNativeTarget "Spotify Notifier Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110BD17F25DD2E1500F1C6B3 /* Debug */,
+				110BD18025DD2E1500F1C6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		110BD18225DD2E1500F1C6B3 /* Build configuration list for PBXNativeTarget "Spotify Notifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110BD18325DD2E1500F1C6B3 /* Debug */,
+				110BD18425DD2E1500F1C6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 110BD14C25DD2E1200F1C6B3 /* Project object */;
+}
