@@ -6,12 +6,17 @@
 //
 
 import Cocoa
+import UserNotifications
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Insert code here to initialize your application
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert]) { granted, error in
+
+        }
     }
 
     func applicationWillTerminate(_ notification: Notification) {

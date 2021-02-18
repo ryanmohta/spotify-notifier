@@ -26,11 +26,13 @@
       "size" : "128x128"
     },
     {
+      "filename" : "spotify-1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "spotify.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
