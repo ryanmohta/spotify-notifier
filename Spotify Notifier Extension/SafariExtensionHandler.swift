@@ -18,15 +18,13 @@ extension UNNotificationAttachment {
         let filename = ProcessInfo().globallyUniqueString
         let fileURL = URL(fileURLWithPath: filename, relativeTo: directoryURL).appendingPathExtension("jpeg")
         
-        NSLog("\(fileURL.absoluteString)")
-        
         do {
-            let imageURL = URL(string: "https://beta.ryanmohta.com/static/media/profilePicture.0090412a.jpg")!
-            let image = NSImage(data: try Data(contentsOf: imageURL))
+            let imageURL = URL(string: "https://i.scdn.co/image/ab67616d000048516017bca98dea58ceddea77c1")
+            let image = NSImage(data: try Data(contentsOf: imageURL!))
             
-            guard let tiffRep = image?.tiffRepresentation else { return nil }
+            let tiffRep = image?.tiffRepresentation
             
-            let bits = NSBitmapImageRep(data: tiffRep)
+            let bits = NSBitmapImageRep(data: tiffRep!)
             NSLog("\(String(describing: bits))")
             let data = bits?.representation(using: .jpeg, properties: [:])
             NSLog("\(String(describing: data))")
