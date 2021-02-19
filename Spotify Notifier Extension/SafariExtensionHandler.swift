@@ -8,41 +8,21 @@
 import SafariServices
 import UserNotifications
 
-extension UNNotificationAttachment {
-
-    static func create(url: String) -> UNNotificationAttachment? {
-        
-        let directoryURL = URL(fileURLWithPath: NSTemporaryDirectory(),
-                                            isDirectory: true)
-        
-        let filename = ProcessInfo().globallyUniqueString
-        let fileURL = URL(fileURLWithPath: filename, relativeTo: directoryURL).appendingPathExtension("jpeg")
-        
-        do {
-            let imageURL = URL(string: "https://i.scdn.co/image/ab67616d000048516017bca98dea58ceddea77c1")
-            let image = NSImage(data: try Data(contentsOf: imageURL!))
-            
-            let tiffRep = image?.tiffRepresentation
-            
-            let bits = NSBitmapImageRep(data: tiffRep!)
-            NSLog("\(String(describing: bits))")
-            let data = bits?.representation(using: .jpeg, properties: [:])
-            NSLog("\(String(describing: data))")
-            
-            try data?.write(to: fileURL,
-                           options: .atomic)
-            
-            let imageAttachment = try UNNotificationAttachment(identifier: filename, url: fileURL, options: nil)
-            
-            return imageAttachment
-        } catch {
-            NSLog("error " + error.localizedDescription)
-        }
-        return nil
-    }
-}
-
 class SafariExtensionHandler: SFSafariExtensionHandler {
+    
+    func addAttachment(url: String) throws -> UNNotificationAttachment {
+        let imageData = try? Data(contentsOf: URL(string: url)!)
+        let fileManager = FileManager.default
+        let temporaryFolderName = ProcessInfo.processInfo.globallyUniqueString
+        let temporaryFolderURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(temporaryFolderName, isDirectory: true)
+
+        try fileManager.createDirectory(at: temporaryFolderURL, withIntermediateDirectories: true, attributes: nil)
+        let imageFileIdentifier = UUID().uuidString
+        let fileURL = temporaryFolderURL.appendingPathComponent(imageFileIdentifier)
+        
+        try imageData!.write(to: fileURL)
+        return try UNNotificationAttachment(identifier: temporaryFolderName, url: fileURL, options: nil)
+    }
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
         // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
@@ -53,10 +33,12 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             content.title = userInfo?["title"] as! String
             content.body = userInfo?["artist"] as! String
             
-            if let attachment = UNNotificationAttachment.create(url: userInfo?["albumCover"] as! String) {
-                NSLog("\(attachment)")
-                // where myImage is any UIImage
+            do {
+                let attachment = try self.addAttachment(url: userInfo?["albumCover"] as! String)
                 content.attachments = [attachment]
+            }
+            catch {
+                NSLog(error.localizedDescription)
             }
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.25, repeats: false)
