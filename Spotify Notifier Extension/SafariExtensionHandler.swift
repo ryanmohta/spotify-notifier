@@ -33,15 +33,15 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             content.title = userInfo?["title"] as! String
             content.body = userInfo?["artist"] as! String
             
-            do {
-                let attachment = try self.addAttachment(url: userInfo?["albumCover"] as! String)
-                content.attachments = [attachment]
-            }
-            catch {
-                NSLog(error.localizedDescription)
-            }
+//            do {
+//                let attachment = try self.addAttachment(url: userInfo?["albumCover"] as! String)
+//                content.attachments = [attachment]
+//            }
+//            catch {
+//                NSLog(error.localizedDescription)
+//            }
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.25, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.01, repeats: false)
             
             // Create the request
             let uuidString = UUID().uuidString
