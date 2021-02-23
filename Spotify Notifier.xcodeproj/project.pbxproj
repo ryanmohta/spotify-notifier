@@ -17,7 +17,7 @@
 		110BD17125DD2E1500F1C6B3 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */; };
 		110BD17625DD2E1500F1C6B3 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */; };
 		110BD17925DD2E1500F1C6B3 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */; };
-		116510FB25E4BAE3003126C8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 116510FA25E4BAE3003126C8 /* script.js */; };
+		1165111925E4DEA0003126C8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 1165111825E4DEA0003126C8 /* script.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		110BD17825DD2E1500F1C6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		110BD17A25DD2E1500F1C6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Notifier_Extension.entitlements; sourceTree = "<group>"; };
-		116510FA25E4BAE3003126C8 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = script.js; path = dist/script.js; sourceTree = "<group>"; };
+		1165111825E4DEA0003126C8 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +129,8 @@
 				110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */,
 				110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */,
 				110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */,
-				116510FA25E4BAE3003126C8 /* script.js */,
 				110BD17A25DD2E1500F1C6B3 /* Info.plist */,
+				1165111825E4DEA0003126C8 /* script.js */,
 				110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */,
 				110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */,
 			);
@@ -234,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				110BD17925DD2E1500F1C6B3 /* SafariExtensionViewController.xib in Resources */,
-				116510FB25E4BAE3003126C8 /* script.js in Resources */,
+				1165111925E4DEA0003126C8 /* script.js in Resources */,
 				110BD17625DD2E1500F1C6B3 /* ToolbarItemIcon.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

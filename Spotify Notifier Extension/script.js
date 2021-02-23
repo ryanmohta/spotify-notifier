@@ -1,6 +1,3 @@
-import fs from 'fs';
-import axios from 'axios';
-
 document.addEventListener("DOMContentLoaded", function(event) {
   setTimeout(() => {
     // Initial target inner node
@@ -33,7 +30,7 @@ function onMutated(mutations) {
     if (title !== null && artist !== null && albumCover !== null) {
       title = title.innerText;
       artist = artist.innerText;
-      albumURL = albumCover.src;
+      const albumURL = albumCover.src;
 
       writeToFile(albumURL);
       albumCover = imageFileName(albumURL);
@@ -44,17 +41,52 @@ function onMutated(mutations) {
 }
 
 
-function writeToFile(url) {
-  const path = `images/${imageFileName(url)}`;
-  axios.get(url, { responseType:'stream' }).then((res) => {
-    res.data.pipe(fs.createWriteStream(path))
-    .on('close', function() {
-      console.log(`file with url ${url} written to path ${path}`);
-    });
+function writeToFile(albumURL) {
+  fetch(albumURL).then(resp => resp.blob()).then(blob => {
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = url;
+    // the filename you want
+    a.download = `${imageFileName(url)}.jpeg`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    console.log('downloaded');
   })
+  .catch(() => alert('oh no!'));
+
+
+  // const path = `images/${imageFileName(url)}`;
+  // fetch(url).then((response) => {
+  //   responseToReadable(response).pipe(fs.createWriteStream(path));
+  // });
+
+
+
+  // axios.get(url, { responseType:'stream' }).then((res) => {
+  //   res.data.pipe(fs.createWriteStream(path))
+  //   .on('close', function() {
+  //     console.log(`file with url ${url} written to path ${path}`);
+  //   });
+  // })
 }
 
 function imageFileName(url) {
   const startingIndex = url.indexOf('/images/') + 8;
   return url.substring(startingIndex);
 }
+//
+// async function responseToReadable(response) {
+//   const reader = response.body.getReader();
+//   const rs = new Readable();
+//   const result = await reader.read();
+//   if (!result.done) {
+//     rs.push(Buffer.from(result.value));
+//   }
+//   else {
+//     rs.push(null);
+//     return;
+//   }
+//   return rs;
+// }
