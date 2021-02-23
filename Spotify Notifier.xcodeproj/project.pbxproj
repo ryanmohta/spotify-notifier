@@ -15,9 +15,9 @@
 		110BD16C25DD2E1500F1C6B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110BD16B25DD2E1500F1C6B3 /* Cocoa.framework */; };
 		110BD16F25DD2E1500F1C6B3 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */; };
 		110BD17125DD2E1500F1C6B3 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */; };
-		110BD17425DD2E1500F1C6B3 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17325DD2E1500F1C6B3 /* script.js */; };
 		110BD17625DD2E1500F1C6B3 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */; };
 		110BD17925DD2E1500F1C6B3 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */; };
+		1165111925E4DEA0003126C8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 1165111825E4DEA0003126C8 /* script.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,11 @@
 		110BD16B25DD2E1500F1C6B3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
-		110BD17325DD2E1500F1C6B3 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		110BD17825DD2E1500F1C6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		110BD17A25DD2E1500F1C6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Notifier_Extension.entitlements; sourceTree = "<group>"; };
+		1165111825E4DEA0003126C8 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,23 +125,23 @@
 		110BD16D25DD2E1500F1C6B3 /* Spotify Notifier Extension */ = {
 			isa = PBXGroup;
 			children = (
+				116510F725E4B2D9003126C8 /* images */,
 				110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */,
 				110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */,
 				110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */,
 				110BD17A25DD2E1500F1C6B3 /* Info.plist */,
+				1165111825E4DEA0003126C8 /* script.js */,
 				110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */,
-				110BD17225DD2E1500F1C6B3 /* Resources */,
+				110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */,
 			);
 			path = "Spotify Notifier Extension";
 			sourceTree = "<group>";
 		};
-		110BD17225DD2E1500F1C6B3 /* Resources */ = {
+		116510F725E4B2D9003126C8 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				110BD17325DD2E1500F1C6B3 /* script.js */,
-				110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */,
 			);
-			path = Resources;
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				110BD17925DD2E1500F1C6B3 /* SafariExtensionViewController.xib in Resources */,
+				1165111925E4DEA0003126C8 /* script.js in Resources */,
 				110BD17625DD2E1500F1C6B3 /* ToolbarItemIcon.pdf in Resources */,
-				110BD17425DD2E1500F1C6B3 /* script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
