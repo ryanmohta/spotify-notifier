@@ -32,7 +32,7 @@ function onMutated(mutations) {
       artist = artist.innerText;
       const albumURL = albumCover.src;
 
-      fetch('http://127.0.0.1:8888/testing').then(response => {
+      fetch('https://localhost:8888/testing').then(response => {
         console.log(response);
       })
 
