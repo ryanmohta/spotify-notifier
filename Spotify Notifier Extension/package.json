@@ -2,7 +2,7 @@
   "name": "spotify-notifier-extension",
   "version": "1.0.0",
   "description": "Spotify Notifications",
-  "main": "script.js",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
