@@ -32,7 +32,11 @@ function onMutated(mutations) {
       artist = artist.innerText;
       const albumURL = albumCover.src;
 
-      writeToFile(albumURL);
+      fetch('http://127.0.0.1:8888/testing').then(response => {
+        console.log(response);
+      })
+
+      // writeToFile(albumURL);
       albumCover = imageFileName(albumURL);
 
       safari.extension.dispatchMessage("Song Changed", { "title": title, "artist": artist, "albumCover": albumCover });

@@ -125,7 +125,6 @@
 		110BD16D25DD2E1500F1C6B3 /* Spotify Notifier Extension */ = {
 			isa = PBXGroup;
 			children = (
-				116510F725E4B2D9003126C8 /* images */,
 				110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */,
 				110BD17025DD2E1500F1C6B3 /* SafariExtensionViewController.swift */,
 				110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */,
@@ -135,13 +134,6 @@
 				110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */,
 			);
 			path = "Spotify Notifier Extension";
-			sourceTree = "<group>";
-		};
-		116510F725E4B2D9003126C8 /* images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
