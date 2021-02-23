@@ -130,18 +130,10 @@
 				110BD17725DD2E1500F1C6B3 /* SafariExtensionViewController.xib */,
 				110BD17A25DD2E1500F1C6B3 /* Info.plist */,
 				110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */,
-				110BD17225DD2E1500F1C6B3 /* Resources */,
-			);
-			path = "Spotify Notifier Extension";
-			sourceTree = "<group>";
-		};
-		110BD17225DD2E1500F1C6B3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
 				110BD17325DD2E1500F1C6B3 /* script.js */,
 				110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */,
 			);
-			path = Resources;
+			path = "Spotify Notifier Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
