@@ -47,5 +47,18 @@ class ViewController: NSViewController {
             }
         }
     }
+    @IBAction func notificationButton(_ sender: Any) {
+            let notification = NSUserNotification()
+            notification.identifier = UUID().uuidString
+            notification.title = "Hello"
+            notification.subtitle = "How are you?"
+            notification.informativeText = "This is a test"
+            notification.contentImage = NSImage(contentsOf: URL(string: "https://i.scdn.co/image/ab67616d0000485198f9f76ab2ae4525fc4e3d7a")!)
+//            notification.deliveryDate = Date(timeIntervalSinceNow: 10)
 
+            // Manually display the notification
+//            NSUserNotificationCenter.default.scheduleNotification(notification)
+            NSUserNotificationCenter.default.deliver(notification)
+    }
+    
 }
