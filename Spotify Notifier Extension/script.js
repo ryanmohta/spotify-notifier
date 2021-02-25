@@ -28,24 +28,11 @@ function onMutated(mutations) {
     let albumCover = document.querySelector('.now-playing ._64acb0e26fe0d9dff68a0e9725b2a920-scss');
 
     if (title !== null && artist !== null && albumCover !== null) {
-      title = title.innerText;
-      artist = artist.innerText;
-      const albumURL = albumCover.src;
-
-      // fetch(`https://localhost:8888/${encodeURIComponent(title)}`).then(response => {
-      //   console.log(response);
-      //   console.log(response.json());
-      // });
-
       const data = {
-        title: title,
-        artist: artist,
-        albumURL: albumURL
+        title: title.innerText,
+        artist: artist.innerText,
+        albumURL: albumCover.src
       };
-
-      // fetch(`https://locahost:8888/song/${data.title}/${data.artist}/${data.albumURL}`).then(response => {
-      //   console.log(response);
-      // });
 
       fetch('https://localhost:8888/update', {
         method: 'POST',
@@ -55,61 +42,7 @@ function onMutated(mutations) {
         body: JSON.stringify(data),
       });
 
-      // writeToFile(albumURL);
-      albumCover = imageFileName(albumURL);
-
-      safari.extension.dispatchMessage("Song Changed", { "title": title, "artist": artist, "albumCover": albumCover });
+      safari.extension.dispatchMessage("Song Changed");
     }
   });
 }
-
-
-function writeToFile(albumURL) {
-  fetch(albumURL).then(resp => resp.blob()).then(blob => {
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
-    // the filename you want
-    a.download = `${imageFileName(url)}.jpeg`;
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
-    console.log('downloaded');
-  })
-  .catch(() => alert('oh no!'));
-
-
-  // const path = `images/${imageFileName(url)}`;
-  // fetch(url).then((response) => {
-  //   responseToReadable(response).pipe(fs.createWriteStream(path));
-  // });
-
-
-
-  // axios.get(url, { responseType:'stream' }).then((res) => {
-  //   res.data.pipe(fs.createWriteStream(path))
-  //   .on('close', function() {
-  //     console.log(`file with url ${url} written to path ${path}`);
-  //   });
-  // })
-}
-
-function imageFileName(url) {
-  const startingIndex = url.indexOf('/image/') + 7;
-  return url.substring(startingIndex);
-}
-//
-// async function responseToReadable(response) {
-//   const reader = response.body.getReader();
-//   const rs = new Readable();
-//   const result = await reader.read();
-//   if (!result.done) {
-//     rs.push(Buffer.from(result.value));
-//   }
-//   else {
-//     rs.push(null);
-//     return;
-//   }
-//   return rs;
-// }

@@ -13,10 +13,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 
     func applicationDidFinishLaunching(_ notification: Notification) {
 //         Insert code here to initialize your application
-//        let center = UNUserNotificationCenter.current()
-//        center.requestAuthorization(options: [.alert]) { granted, error in
-//
-//        }
         NSUserNotificationCenter.default.delegate = self
 
         DistributedNotificationCenter.default().addObserver(self, selector: #selector(notificationReceived), name: NSNotification.Name(rawValue: "Song Changed"), object: nil)
@@ -47,10 +43,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 notification.title = json?["title"] as? String
                 notification.informativeText = json?["artist"] as? String
                 notification.contentImage = NSImage(contentsOf: URL(string: (json?["albumURL"] as? String)!)!)
-        //            notification.deliveryDate = Date(timeIntervalSinceNow: 10)
-
-                // Manually display the notification
-        //            NSUserNotificationCenter.default.scheduleNotification(notification)
                 NSUserNotificationCenter.default.deliver(notification)
             } catch {
                 print(error.localizedDescription)
@@ -59,14 +51,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 
         task.resume()
         
-        
-        print("Notification Received")
-        print(notification.userInfo?["title"] ?? "title")
-        print(notification.userInfo?["artist"] ?? "artist")
-        print(notification.userInfo?["albumCover"] ?? "cover")
-        
     }
-    
-    
 
 }
