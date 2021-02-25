@@ -58,10 +58,5 @@
 	</dict>
 	<key>NSHumanReadableDescription</key>
 	<string>This is Spotify Notifier Extension. You should tell us what your extension does here.</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 </dict>
 </plist>
