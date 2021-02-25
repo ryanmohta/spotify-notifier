@@ -19,7 +19,7 @@ var certOptions = {
 app.post('/update', (req, res) => {
   data = req.body;
   console.log(data);
-  res.status(200);
+  res.sendStatus(200);
 });
 
 app.get('/latest', (req, res) => {

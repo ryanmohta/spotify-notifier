@@ -40,9 +40,8 @@ function onMutated(mutations) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data),
-      });
-
-      safari.extension.dispatchMessage("Song Changed");
+      })
+      .then(() => safari.extension.dispatchMessage("Song Changed"));
     }
   });
 }
