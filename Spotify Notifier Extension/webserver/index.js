@@ -8,7 +8,7 @@ import bodyParser from 'body-parser';
 
 const app = express();
 app.use(cors());
-app.use(express.static("public"));
+// app.use(express.static("public"));
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -19,30 +19,23 @@ var certOptions = {
   cert: fs.readFileSync(path.resolve('server.crt'))
 };
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
-  next();
-});
-
-app.get("/:id", (req, res) => {
-  var id = decodeURIComponent(req.params.id);
-  console.log(id);
+// app.get("/:id", (req, res) => {
+//   var id = decodeURIComponent(req.params.id);
+//   console.log(id);
 
   // download(id, `public/images/${imageFileName(id)}.jpeg`, function(){
   //   res.send('hello world from ' + id + ed);
   // });
 
-  res.send('hello world from ' + id);
+  // res.send('hello world from ' + id);
+  //
+  // function imageFileName(url) {
+  //   const startingIndex = url.indexOf('/image/') + 7;
+  //   return url.substring(startingIndex);
+  // }
 
-  function imageFileName(url) {
-    const startingIndex = url.indexOf('/image/') + 7;
-    return url.substring(startingIndex);
-  }
 
-
-});
+// });
 
 // app.get('/song/:title/:artist/:albumURL', function(req, res, next) {
 //   console.log(req.params.title);
@@ -74,14 +67,14 @@ app.get('/latest', (req, res) => {
   res.json(data);
 })
 
-function download(uri, filename, callback) {
-  request.head(uri, function(err, res, body){
-    console.log('content-type:', res.headers['content-type']);
-    console.log('content-length:', res.headers['content-length']);
-
-    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-  });
-}
+// function download(uri, filename, callback) {
+//   request.head(uri, function(err, res, body){
+//     console.log('content-type:', res.headers['content-type']);
+//     console.log('content-length:', res.headers['content-length']);
+//
+//     request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+//   });
+// }
 
 https.createServer(certOptions, app).listen(8888, () => console.log("https server listening on port 8888"));
 // app.listen(8080, () => console.log(`Started server at http://localhost:8080!`));
