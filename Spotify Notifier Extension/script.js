@@ -32,9 +32,28 @@ function onMutated(mutations) {
       artist = artist.innerText;
       const albumURL = albumCover.src;
 
-      fetch('https://localhost:8888/testing').then(response => {
-        console.log(response);
-      })
+      // fetch(`https://localhost:8888/${encodeURIComponent(title)}`).then(response => {
+      //   console.log(response);
+      //   console.log(response.json());
+      // });
+
+      const data = {
+        title: title,
+        artist: artist,
+        albumURL: albumURL
+      };
+
+      // fetch(`https://locahost:8888/song/${data.title}/${data.artist}/${data.albumURL}`).then(response => {
+      //   console.log(response);
+      // });
+
+      fetch('https://localhost:8888/update', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data),
+      });
 
       // writeToFile(albumURL);
       albumCover = imageFileName(albumURL);
@@ -77,7 +96,7 @@ function writeToFile(albumURL) {
 }
 
 function imageFileName(url) {
-  const startingIndex = url.indexOf('/images/') + 8;
+  const startingIndex = url.indexOf('/image/') + 7;
   return url.substring(startingIndex);
 }
 //
