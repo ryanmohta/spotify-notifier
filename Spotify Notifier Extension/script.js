@@ -1,3 +1,5 @@
+const SERVER_URL = 'https://spotifynotifier-server.herokuapp.com'
+
 document.addEventListener("DOMContentLoaded", function(event) {
   setTimeout(() => {
     // Initial target inner node
@@ -34,7 +36,7 @@ function onMutated(mutations) {
         albumURL: albumCover.src
       };
 
-      fetch('https://localhost:8888/update', {
+      fetch(SERVER_URL + '/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
