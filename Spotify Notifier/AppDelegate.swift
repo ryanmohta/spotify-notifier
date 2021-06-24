@@ -7,6 +7,11 @@
 
 import Cocoa
 import UserNotifications
+import ServiceManagement
+
+extension Notification.Name {
+    static let killLauncher = Notification.Name("killLauncher")
+}
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
@@ -16,14 +21,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         NSUserNotificationCenter.default.delegate = self
 
         DistributedNotificationCenter.default().addObserver(self, selector: #selector(notificationReceived), name: NSNotification.Name(rawValue: "Song Changed"), object: nil)
+        
+        let launcherAppId = "com.ryanmohta.Spotify-Notifier-Launcher"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+
+        SMLoginItemSetEnabled(launcherAppId as CFString, true)
+
+        if isRunning {
+            DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
+        }
     }
 
     func applicationWillTerminate(_ notification: Notification) {
         // Insert code here to tear down your application
-    }
-
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return true
     }
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
