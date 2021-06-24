@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		110BD15925DD2E1200F1C6B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD15825DD2E1200F1C6B3 /* AppDelegate.swift */; };
 		110BD15C25DD2E1200F1C6B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110BD15A25DD2E1200F1C6B3 /* Main.storyboard */; };
-		110BD15E25DD2E1200F1C6B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD15D25DD2E1200F1C6B3 /* ViewController.swift */; };
 		110BD16025DD2E1500F1C6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110BD15F25DD2E1500F1C6B3 /* Assets.xcassets */; };
 		110BD16725DD2E1500F1C6B3 /* Spotify Notifier Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 110BD16625DD2E1500F1C6B3 /* Spotify Notifier Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		110BD16C25DD2E1500F1C6B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110BD16B25DD2E1500F1C6B3 /* Cocoa.framework */; };
@@ -64,7 +63,6 @@
 		110BD15725DD2E1200F1C6B3 /* Spotify_Notifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Notifier.entitlements; sourceTree = "<group>"; };
 		110BD15825DD2E1200F1C6B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		110BD15B25DD2E1200F1C6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		110BD15D25DD2E1200F1C6B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		110BD15F25DD2E1500F1C6B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		110BD16125DD2E1500F1C6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		110BD16625DD2E1500F1C6B3 /* Spotify Notifier Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Spotify Notifier Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +137,6 @@
 				110BD15725DD2E1200F1C6B3 /* Spotify_Notifier.entitlements */,
 				110BD15825DD2E1200F1C6B3 /* AppDelegate.swift */,
 				110BD15A25DD2E1200F1C6B3 /* Main.storyboard */,
-				110BD15D25DD2E1200F1C6B3 /* ViewController.swift */,
 				110BD15F25DD2E1500F1C6B3 /* Assets.xcassets */,
 				110BD16125DD2E1500F1C6B3 /* Info.plist */,
 			);
@@ -314,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				110BD15E25DD2E1200F1C6B3 /* ViewController.swift in Sources */,
 				110BD15925DD2E1200F1C6B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
