@@ -488,11 +488,11 @@
 		110BD17F25DD2E1500F1C6B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier Extension/Spotify_Notifier_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = extension/Spotify_Notifier_Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX2UC95MTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Spotify Notifier Extension/Info.plist";
+				INFOPLIST_FILE = extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -508,11 +508,11 @@
 		110BD18025DD2E1500F1C6B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier Extension/Spotify_Notifier_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = extension/Spotify_Notifier_Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX2UC95MTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Spotify Notifier Extension/Info.plist";
+				INFOPLIST_FILE = extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -531,12 +531,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier/Spotify_Notifier.entitlements";
+				CODE_SIGN_ENTITLEMENTS = app/Spotify_Notifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX2UC95MTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Spotify Notifier/Info.plist";
+				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -554,12 +554,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier/Spotify_Notifier.entitlements";
+				CODE_SIGN_ENTITLEMENTS = app/Spotify_Notifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX2UC95MTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Spotify Notifier/Info.plist";
+				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -576,12 +576,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier Launcher/Spotify_Notifier_Launcher.entitlements";
+				CODE_SIGN_ENTITLEMENTS = launcher/Spotify_Notifier_Launcher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX2UC95MTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Spotify Notifier Launcher/Info.plist";
+				INFOPLIST_FILE = launcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -599,12 +599,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Spotify Notifier Launcher/Spotify_Notifier_Launcher.entitlements";
+				CODE_SIGN_ENTITLEMENTS = launcher/Spotify_Notifier_Launcher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX2UC95MTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Spotify Notifier Launcher/Info.plist";
+				INFOPLIST_FILE = launcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

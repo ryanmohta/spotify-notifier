@@ -1,4 +1,4 @@
-const SERVER_URL = 'https://spotifynotifier-server.herokuapp.com'
+const SERVER_URL = 'https://spotify-notifier.herokuapp.com'
 
 document.addEventListener("DOMContentLoaded", function(event) {
   setTimeout(() => {

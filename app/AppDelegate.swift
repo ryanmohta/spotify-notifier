@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     @objc func notificationReceived(notification: NSNotification) {
         
-        let url = URL(string: "https://spotifynotifier-server.herokuapp.com/latest")!
+        let url = URL(string: "https://spotify-notifier.herokuapp.com/latest")!
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
