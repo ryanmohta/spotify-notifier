@@ -113,9 +113,9 @@
 		110BD14B25DD2E1200F1C6B3 = {
 			isa = PBXGroup;
 			children = (
-				110BD15625DD2E1200F1C6B3 /* Spotify Notifier */,
-				110BD16D25DD2E1500F1C6B3 /* Spotify Notifier Extension */,
-				112426C02684B5C0003FBC92 /* Spotify Notifier Launcher */,
+				110BD15625DD2E1200F1C6B3 /* app */,
+				110BD16D25DD2E1500F1C6B3 /* extension */,
+				112426C02684B5C0003FBC92 /* launcher */,
 				110BD16A25DD2E1500F1C6B3 /* Frameworks */,
 				110BD15525DD2E1200F1C6B3 /* Products */,
 			);
@@ -131,7 +131,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		110BD15625DD2E1200F1C6B3 /* Spotify Notifier */ = {
+		110BD15625DD2E1200F1C6B3 /* app */ = {
 			isa = PBXGroup;
 			children = (
 				110BD15725DD2E1200F1C6B3 /* Spotify_Notifier.entitlements */,
@@ -140,7 +140,7 @@
 				110BD15F25DD2E1500F1C6B3 /* Assets.xcassets */,
 				110BD16125DD2E1500F1C6B3 /* Info.plist */,
 			);
-			path = "Spotify Notifier";
+			path = app;
 			sourceTree = "<group>";
 		};
 		110BD16A25DD2E1500F1C6B3 /* Frameworks */ = {
@@ -152,7 +152,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		110BD16D25DD2E1500F1C6B3 /* Spotify Notifier Extension */ = {
+		110BD16D25DD2E1500F1C6B3 /* extension */ = {
 			isa = PBXGroup;
 			children = (
 				110BD16E25DD2E1500F1C6B3 /* SafariExtensionHandler.swift */,
@@ -163,10 +163,10 @@
 				110BD17B25DD2E1500F1C6B3 /* Spotify_Notifier_Extension.entitlements */,
 				110BD17525DD2E1500F1C6B3 /* ToolbarItemIcon.pdf */,
 			);
-			path = "Spotify Notifier Extension";
+			path = extension;
 			sourceTree = "<group>";
 		};
-		112426C02684B5C0003FBC92 /* Spotify Notifier Launcher */ = {
+		112426C02684B5C0003FBC92 /* launcher */ = {
 			isa = PBXGroup;
 			children = (
 				112426C12684B5C0003FBC92 /* AppDelegate.swift */,
@@ -175,7 +175,7 @@
 				112426CA2684B5C6003FBC92 /* Info.plist */,
 				112426CB2684B5C6003FBC92 /* Spotify_Notifier_Launcher.entitlements */,
 			);
-			path = "Spotify Notifier Launcher";
+			path = launcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
