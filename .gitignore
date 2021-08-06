@@ -1,6 +1,2 @@
-node_modules
-package-lock.json
-dist
-public
-.elasticbeanstalk/
 *.xcuserstate
+.DS_Store
