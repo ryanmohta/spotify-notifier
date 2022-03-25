@@ -46,7 +46,7 @@ guard let name = getPropertyOfCurrentTrack(property: "name") else { return }
 
 Well, more specifically every half second I check the ID of the currently playing song, and if it’s different than it was the last time I called the function, then I gather the rest of the properties and display the notification with it using the [`NSUserNotification`](https://developer.apple.com/documentation/foundation/nsusernotification) API.
 
-***wait, but that API’s deprecated!!!!1!1!***
+***Wait, but that API’s deprecated!!!!1!1!***
 
 I know, but unfortunately I couldn’t get the newer [`User Notifications`](https://developer.apple.com/documentation/usernotifications) framework to display the cover art in the notification after weeks of trying :((( Hopefully Apple fixes this in the future though!
 
