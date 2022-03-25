@@ -6,7 +6,8 @@ If you always find yourself switching between Spotify and whatever you’re doin
 
 ## How to install
 *Only available on macOS, since that’s what I use and know best*
-- Download the app to your computer
+
+- [Download the app to your computer](https://github.com/ryanmohta/spotify-notifier/files/8349422/Spotify.Notifier.app.zip)
 - Move the app anywhere in your Applications folder
 - Open the app and accept permission to send notifications (for obvious reasons) and, if prompted, permission to control Spotify (so the app knows when a song was changed)
 - That’s it! The app will now automatically run in the background whenever Spotify is open.
