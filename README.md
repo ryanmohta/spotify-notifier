@@ -2,8 +2,7 @@
 
 If you always find yourself switching between Spotify and whatever you’re doing just to see what song started playing, now you don’t have to! Spotify Notifier subtly presents the song title, artist, album, and cover art in the corner of your screen whenever a new song starts. Especially useful for the radio junkies or those that enjoy exploring new albums or playlists (you know who you are!)
 
-![Screen Recording 2022-03-25 at 03 36 13-2](https://user-images.githubusercontent.com/19882060/160114333-94712a3e-e341-48ce-8606-72a55730e7d6.gif)
-
+![Screen Recording 2022-03-25 at 03 36 13-3](https://user-images.githubusercontent.com/19882060/160116585-a68f589c-193b-4c1b-ac98-780b31edbccf.gif)
 
 ## How to install
 *Only available on macOS, since that’s what I use and know best*
